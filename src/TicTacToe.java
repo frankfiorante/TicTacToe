@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class TicTacToe {
 
     private char player;
@@ -8,6 +10,4 @@ public class TicTacToe {
         game.initBoard();
         game.printBoard();
     }
-
-
 }

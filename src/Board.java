@@ -1,25 +1,26 @@
 public class Board {
 
-    private char[][] board = new char[3][3];
+    private char[] board;
 
     public void initBoard() {
-        //loop through rows
-        for (int i = 0; i < 3; i++) {
+        board = new char[9];
 
-            //loop through columns
-            for (int j = 0; j < 3; j++) {
-                board[i][j] = '-';
-            }
+        //loop through array and add '-'
+        for (int i = 0; i < 9; i++) {
+            board[i] = '-';
         }
     }
 
     public void printBoard() {
-        for (int i = 0; i < 3; i++) {
-            System.out.print(" ");
-            for (int j = 0; j < 3; j++) {
-                System.out.print(board[i][j] + " ");
+        System.out.print("-----------------");
+        for (int i = 0; i < 9; i++) {
+            if (i % 3 == 0) {
+                System.out.println();
             }
-            System.out.println();
+            System.out.print("| ");
+            System.out.print(board[i] + " | ");
         }
+        System.out.println();
+        System.out.println("-----------------");
     }
 }
